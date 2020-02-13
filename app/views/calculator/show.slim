@@ -1,0 +1,10 @@
+h1 Calculator
+
+= form_tag calculate_path, method: :post do
+  = label_tag(:expression, "Expression:")
+  = text_field_tag(:expression)
+  = submit_tag 'Calculate'
+
+h2 = @answer
+
+
