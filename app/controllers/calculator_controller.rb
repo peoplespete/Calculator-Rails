@@ -6,7 +6,7 @@ class CalculatorController < ApplicationController
   end
 
   def calculate
-    answer = evaluate_expression(calculation_params[:expression])
+    answer = evaluate_expression(calculation_params[:expression]).round(2)
     redirect_to root_path(answer: answer)
   end
 
