@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+First off, thanks for the opportunity to work this code challenge.
 
-Things you may want to cover:
+## How to get this puppy working...
 
-* Ruby version
+```bash
+git clone https://github.com/peoplespete/Calculator-Rails.git
+bundle install
+rails server
+```
 
-* System dependencies
+Open the browser to [localhost:3000](http://localhost:3000/)
 
-* Configuration
 
-* Database creation
+## To run the tests
+```bash
+bundle exec rspec
+```
 
-* Database initialization
+## To find the business logic
 
-* How to run the test suite
+Most of the business logic is in a helper called [CalculatorHelper](app/helpers/calculator_helper.rb).
+A little more logic can be found in the [CalculatorController](app/controllers/calculator_controller.rb).
 
-* Services (job queues, cache servers, search engines, etc.)
+Thanks again for your time and attention!
 
-* Deployment instructions
-
-* ...
+-Pete
