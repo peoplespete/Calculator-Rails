@@ -6,7 +6,9 @@ class CalculatorController < ApplicationController
   end
 
   def calculate
-    answer = evaluate_expression(calculation_params[:expression]).round(2)
+    answer = evaluate_expression(calculation_params[:expression])
+    rounding_param = answer.to_i == answer ? 0 : 2 # this makes sure integers are shown without any decimals
+    answer = answer.round(rounding_param)
     redirect_to root_path(answer: answer)
   end
 
